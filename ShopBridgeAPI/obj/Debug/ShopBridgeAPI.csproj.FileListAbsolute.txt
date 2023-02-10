@@ -124,3 +124,5 @@ C:\Users\HP\Desktop\ThinkBridge(Task)\ThikBridgeAPI\ShopBridgeAPI\obj\Debug\Shop
 C:\Users\HP\Desktop\ThinkBridge(Task)\ThikBridgeAPI\ShopBridgeAPI\obj\Debug\ShopBridgeAPI.csproj.CopyComplete
 C:\Users\HP\Desktop\ThinkBridge(Task)\ThikBridgeAPI\ShopBridgeAPI\obj\Debug\ShopBridgeAPI.dll
 C:\Users\HP\Desktop\ThinkBridge(Task)\ThikBridgeAPI\ShopBridgeAPI\obj\Debug\ShopBridgeAPI.pdb
+C:\Users\HP\Desktop\ThinkBridge(Task)\ThikBridgeAPI\ShopBridgeAPI\bin\EntityFramework.SqlServer.dll
+C:\Users\HP\Desktop\ThinkBridge(Task)\ThikBridgeAPI\ShopBridgeAPI\bin\EntityFramework.SqlServer.xml

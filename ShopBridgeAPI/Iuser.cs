@@ -6,7 +6,7 @@
 //    Manual changes to this file will be overwritten if the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-
+using System.ComponentModel.DataAnnotations;
 namespace ShopBridgeAPI
 {
     using System;
@@ -15,8 +15,11 @@ namespace ShopBridgeAPI
     public partial class Iuser
     {
         public int Uid { get; set; }
+        [Required]
         public string Uemail { get; set; }
+        [Required]
         public string Upass { get; set; }
+        [Required]
         public short Urole { get; set; }
     }
 }

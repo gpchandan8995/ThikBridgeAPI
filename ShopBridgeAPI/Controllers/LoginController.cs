@@ -18,19 +18,20 @@ namespace ShopBridgeAPI.Controllers
 
         public ActionResult afterSignin(Iuser user1)
         {
-
-            List<Iuser> users = db.Iusers.ToList();
-            foreach (Iuser user in users)
+            List<Iuser> users = db.Iusers.ToList(); 
+            foreach(Iuser user in users)
             {
-                if (user.Uemail == user1.Uemail && user.Upass == user1.Upass)
+                if(user.Uemail==user1.Uemail && user.Upass == user1.Upass)
                 {
                     FormsAuthentication.SetAuthCookie(user1.Uemail, false);
                     return Redirect("/Home/Index");
-                }
-            }
 
-            ViewBag.Title = "Invalid username or password try again";
+                }
+              
+            }
+            ViewBag.Title = " invalid username or password";
             return View("Signin");
+
         }
     }
 }

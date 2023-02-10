@@ -6,7 +6,7 @@
 //    Manual changes to this file will be overwritten if the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-
+using System.ComponentModel.DataAnnotations;
 namespace ShopBridgeAPI
 {
     using System;
@@ -15,11 +15,17 @@ namespace ShopBridgeAPI
     public partial class Item
     {
         public int Id { get; set; }
+        [Required]
         public string Iname { get; set; }
+        [Required]
         public string Idescription { get; set; }
+        [Required]
         public int Iprice { get; set; }
+        [Required]
         public System.DateTime IaddDate { get; set; }
+        [Required]
         public Nullable<System.DateTime> IexpDate { get; set; }
+        [Required]
         public string Iavailable { get; set; }
     }
 }

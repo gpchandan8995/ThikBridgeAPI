@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="InventoryModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Item">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Iname" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Idescription" Type="nvarchar" MaxLength="50" />
+    <Property Name="Iprice" Type="int" Nullable="false" />
+    <Property Name="IaddDate" Type="date" Nullable="false" />
+    <Property Name="IexpDate" Type="date" />
+    <Property Name="Iavailable" Type="nchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Iuser">
+    <Key>
+      <PropertyRef Name="Uid" />
+    </Key>
+    <Property Name="Uid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Uemail" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Upass" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Urole" Type="smallint" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="InventoryModelStoreContainer">
+    <EntitySet Name="Item" EntityType="Self.Item" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Iuser" EntityType="Self.Iuser" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,37 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Signin</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-4 col-sm-6">
+                <h2>Welcome To ShopBridge</h2>
+                <form method="post" action="/Login/afterSignin">
+                    <div class="form-group">
+                        <label for="Uemail">Email address</label>
+                        <input type="text" class="form-control" id="Uemail" name="Uemail" aria-describedby="emailHelp" placeholder="Enter email">
+                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                    </div>
+                    <h3>@ViewBag.Title</h3>
+                    <div class="form-group">
+                        <label for="Upass">Password</label>
+                        <input type="password" class="form-control" id="Upass" name="Upass" placeholder="Password">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

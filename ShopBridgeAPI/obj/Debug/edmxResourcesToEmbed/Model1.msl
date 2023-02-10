@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="InventoryModelStoreContainer" CdmEntityContainer="InventoryEntities">
+    <EntitySetMapping Name="Items">
+      <EntityTypeMapping TypeName="InventoryModel.Item">
+        <MappingFragment StoreEntitySet="Item">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Iname" ColumnName="Iname" />
+          <ScalarProperty Name="Idescription" ColumnName="Idescription" />
+          <ScalarProperty Name="Iprice" ColumnName="Iprice" />
+          <ScalarProperty Name="IaddDate" ColumnName="IaddDate" />
+          <ScalarProperty Name="IexpDate" ColumnName="IexpDate" />
+          <ScalarProperty Name="Iavailable" ColumnName="Iavailable" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Iusers">
+      <EntityTypeMapping TypeName="InventoryModel.Iuser">
+        <MappingFragment StoreEntitySet="Iuser">
+          <ScalarProperty Name="Uid" ColumnName="Uid" />
+          <ScalarProperty Name="Uemail" ColumnName="Uemail" />
+          <ScalarProperty Name="Upass" ColumnName="Upass" />
+          <ScalarProperty Name="Urole" ColumnName="Urole" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

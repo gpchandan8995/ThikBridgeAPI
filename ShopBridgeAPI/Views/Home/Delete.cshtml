@@ -1,0 +1,72 @@
+﻿@model ShopBridgeAPI.Item
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Item</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Iname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Iname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Idescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Idescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Iprice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Iprice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IaddDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IaddDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IexpDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IexpDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Iavailable)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Iavailable)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

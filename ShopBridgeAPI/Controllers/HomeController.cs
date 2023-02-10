@@ -56,5 +56,22 @@ namespace ShopBridgeAPI.Controllers
             return RedirectToAction("Index");
         }
 
+
+        public ActionResult Delete(int id)
+        {
+            var data = db.Items.Where(x => x.Id == id).FirstOrDefault();
+            try
+            {
+                db.Items.Remove(data);
+            }
+            catch (NullReferenceException)
+            {
+                throw new NullReferenceException();
+            }
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+
     }
 }

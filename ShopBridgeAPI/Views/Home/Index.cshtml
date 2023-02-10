@@ -4,7 +4,7 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>List</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -32,32 +32,33 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model)
-{
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Iname)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Idescription)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Iprice)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.IaddDate)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.IexpDate)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Iavailable)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Iname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Idescription)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Iprice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IaddDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IexpDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Iavailable)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) | 
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+               
+</td>
+        </tr>
+    }
 
 </table>

@@ -26,10 +26,10 @@ namespace ShopBridgeAPI.Controllers
         [HttpPost]
         public ActionResult Create(Item item)
         {
-            db.Items.Add(item);
-            db.SaveChanges();
-            ViewBag.Message = " Data Added Sucessfully ";
-            return View("Index");
+           db.Items.Add(item);
+           int row_affected = db.SaveChanges();
+           
+            return RedirectToAction("Index");
         }
 
         [HttpGet]

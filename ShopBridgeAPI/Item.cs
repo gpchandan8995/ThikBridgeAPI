@@ -14,6 +14,7 @@ namespace ShopBridgeAPI
     
     public partial class Item
     {
+        [Key]
         public int Id { get; set; }
         [Required]
         public string Iname { get; set; }
